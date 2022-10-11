@@ -1,2 +1,2 @@
 # jquery-practice
-A placeholder repo to store basic jQuery practice exercises.
+A placeholder repository to store basic jQuery practice exercises.
