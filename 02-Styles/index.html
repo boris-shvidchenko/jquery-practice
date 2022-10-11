@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>jQuery Basics</title>
+        <script src='../jquery.js'></script>
+        <script>
+
+            // fading 
+                
+            $('document').ready(function(){
+                $('#fadein').on('click', () => {
+                    $('#textbox').fadeIn(3000);
+                });
+                $('#fadeout').on('click', () => {
+                    $('#textbox').fadeOut('fast');
+                });
+            });
+
+            // slide elements
+
+            $('document').ready(function(){
+                $('#slideup').click(() => {
+                    $('#textbox2').slideUp(2000, 'linear');
+                });
+                $('#slidedown').click(() => {
+                    $('#textbox2').slideDown(2000, 'linear');
+                });
+            });
+
+            
+        </script>
+        <style>
+            #textbox {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <a href='#' id='fadein'>Fade IN</a> |
+        <a href='#' id='fadeout'>Fade OUT</a>
+        <div id='textbox'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis libero vitae odio dapibus viverra. 
+        </div></br>
+        <a href='#' id='slideup'>Slide UP</a> |
+        <a href='#' id='slidedown'>Slide Down</a>
+        <div id='textbox2'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis libero vitae odio dapibus viverra. 
+        </div>
+    </body>
+</html>
+

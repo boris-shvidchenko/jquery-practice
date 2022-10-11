@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>jQuery Basics</title>
+        <script src='../jquery.js'></script>
+        <script>
+
+            // using selectors to access parts of the DOM, in order to manipulate it
+
+            $('document').ready(function(){
+                $('h1').css('border','1px solid green');
+            });
+
+            // adding custom variables/replacing DOM elements 
+
+            $('document').ready(function(){
+                const newText = $('<p>');
+                newText.append('<h3>I just replaced something</h3>');
+                // $('#textbox').html(newText);
+            });
+
+            // handling events with jQuery
+
+            $('document').ready(function(){
+                const mouseClick = () => {
+                    $('#btn').html('<p>Clicked</p>');
+                };
+                $('#btn').on('click', mouseClick);
+            });
+
+            // manipulating element styles
+
+            $('document').ready(function(){
+                $('#show').on('click', () => {
+                    $('#textbox').show();
+                });
+                $('#hide').on('click', () => {
+                    $('#textbox').hide();
+                });
+            });
+
+            
+        </script>
+        <style>
+            #textbox {
+                display: none;
+            }
+
+            #btn {
+                width: 100px;
+                height: 50px;
+                border: 1px solid black;
+                background-color: aliceblue;
+                text-align: center;
+            }
+
+            #show {
+                display: block;
+            }
+
+            #hide {
+                display: block;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Introduction to jQuery</h1>
+        <div id='textbox'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis libero vitae odio dapibus viverra. Vestibulum non nisl leo. Maecenas aliquet interdum molestie. Proin viverra augue nec dui sollicitudin pretium. Aenean consequat viverra leo iaculis tincidunt. Nam eleifend velit odio, nec dictum libero consectetur sed. Nunc viverra molestie eros sed efficitur.
+        </div>
+        <div id='btn'><p>Button</p></div>
+        <a href='#' id='show'>Click to show</a><br>
+        <a href='#' id='hide'>Click to hide</a>
+    </body>
+</html>
+
