@@ -17,7 +17,7 @@
                 });
             });
 
-            // slide elements
+            // slide elements and toggles
 
             $('document').ready(function(){
                 $('#slideup').click(() => {
@@ -28,11 +28,47 @@
                 });
             });
 
-            
+            $('document').ready(function(){
+                $('#toggleme').click(() => {
+                    $('#textbox3').toggle(4000, 'swing');
+                });
+            });
+
+            // animations
+
+            $('document').ready(function(){
+                $('#grow').click(() => {
+                    $('#textbox4').animate({ width:'500px'}, 2000);
+                });
+                $('#move').click(() => {
+                    $('#textbox4').animate({ marginLeft:'100px'}, 2000);
+                });
+                $('#bigger').click(() => {
+                    $('#textbox4').animate({ fontSize:'40px'}, 2000);
+                });
+                $('#many').click(() => {
+                    $('#textbox4').animate({ fontSize:'20px', marginTop:'40px', width:'300px'}, 2000);
+                });
+            });
+
+            // selectors
+
+            $('document').ready(function(){
+                $('p').css('border', '2px red solid');
+                $('#headertop').css('border', '2px orange dotted');
+                $('.greenborder').css('border', '2px green dashed');
+            });
+
         </script>
         <style>
             #textbox {
                 display: none;
+            }
+            #textbox4 {
+                width: 200px;
+                height: 200px;
+                background-color: #ccc;
+                margin-top: 20px;;
             }
         </style>
     </head>
@@ -42,11 +78,26 @@
         <div id='textbox'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis libero vitae odio dapibus viverra. 
         </div></br>
+        <hr>
         <a href='#' id='slideup'>Slide UP</a> |
         <a href='#' id='slidedown'>Slide Down</a>
         <div id='textbox2'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis libero vitae odio dapibus viverra. 
         </div>
+        <hr>
+        <a href='#' id='toggleme'>Toggle Me</a> 
+        <div id='textbox3'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis libero vitae odio dapibus viverra. 
+        </div>
+        <hr>
+        <a href='#' id='grow'>Grow</a> | <a href='#' id='move'>Move</a> | <a href='#' id='bigger'>Bigger</a> | <a href='#' id='many'>Many Things</a> |
+        <div id='textbox4'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis libero vitae odio dapibus viverra. 
+        </div>
+        <hr>
+        <p id='headertop'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+        <p class='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+        <p class='greenborder'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
     </body>
 </html>
 
